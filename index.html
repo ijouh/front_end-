@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>crud</h2>
+            <p>product management system</p>
+        </div>
+        <hr class="hear_hr">
+        <input placeholder="title" type="text" id="title">
+        <div class="input">
+            <input onkeyup="getTotle()" type="number" placeholder="price" id="price">
+            <input onkeyup="getTotle()" type="number" placeholder="taxes" id="taxes">
+            <input onkeyup="getTotle()" type="number" placeholder="ads" id="ads">
+            <input onkeyup="getTotle()" type="number" placeholder="discount" id="discount">
+            <small class="totale" id="totale">000</small>
+        </div>
+        <input type="number" placeholder="count" id="count">
+        <input type="text" placeholder="category" id="category">
+        <button onclick="AddPro()" id="submit">create</button>
+        <div id="create"></div>
+        <input type="text" placeholder="search" id="search">
+        
+        <div class="search">
+            <button onclick="getSearchMode(this.id)" id="searchbyTitle"  class="searchbyTitle">search by title</button>
+            <button onclick="getSearchMode(this.id)" id="sreachbyCategory" class="sreachbyCategory">search by Category</button>
+        </div>
+        <div id="deleteAll"></div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delate</th>
+            </tr>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
